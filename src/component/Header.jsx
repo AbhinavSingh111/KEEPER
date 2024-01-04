@@ -1,9 +1,10 @@
 import React from 'react';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 
 const Header = () => {
   return (
     <header>
-      <h1>In Me!</h1>
+      <h1><NoteAltIcon/>In Me!</h1>
     </header>
     
   )

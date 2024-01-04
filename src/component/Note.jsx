@@ -1,4 +1,6 @@
 import React from "react";
+import Fab from '@mui/material/Fab';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Note = (props) => {
   const handleDelete = () => {
@@ -8,7 +10,7 @@ const Note = (props) => {
     <div className="note">
       <h1>{props.details.title}</h1>
       <p>{props.details.description}</p>
-      <button onClick={handleDelete}>DELETE</button>
+      <Fab onClick={handleDelete}><DeleteIcon /></Fab>
     </div>
   );
 };
