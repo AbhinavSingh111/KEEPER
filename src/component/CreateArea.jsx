@@ -10,19 +10,11 @@ function CreateArea(props) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setNote((prevValue) => {
-      if (name === "title") {
         setIsEmpty(false);
         return {
-          ...note,
-          title: value,
+          ...prevValue,
+          [name]: value,
         };
-      } else if (name === "content") {
-        setIsEmpty(false);
-        return {
-          ...note,
-          description: value,
-        };
-      }
     });
   };
 
@@ -50,7 +42,7 @@ function CreateArea(props) {
           value={note.title}
         />
         <textarea
-          name="content"
+          name="description"
           placeholder="Take a note..."
           rows="3"
           onChange={handleChange}
